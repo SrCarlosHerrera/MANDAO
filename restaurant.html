@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ff7900">
+  <title>Menú del restaurante — MANDAO</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="restaurant.css">
+  <script src="restaurant.js" defer></script>
+</head>
+<body>
+  <header class="site-header restaurant-header">
+    <a class="logo" href="index.html#establecimientos">MAN<span>DAO</span><i>✳</i></a>
+    <a class="back-link" href="index.html#establecimientos">← Volver a establecimientos</a>
+    <button class="cart-button" id="open-cart">Carrito <span id="cart-count">0</span></button>
+  </header>
+
+  <main>
+    <section class="restaurant-hero" id="restaurant-hero">
+      <img id="restaurant-image" src="" alt="">
+      <div class="restaurant-overlay"></div>
+      <div class="restaurant-summary">
+        <p class="eyebrow">ESTABLECIMIENTO</p>
+        <h1 id="restaurant-name">Cargando menú...</h1>
+        <p id="restaurant-description"></p>
+        <span id="restaurant-rating"></span>
+      </div>
+    </section>
+
+    <section class="restaurant-menu section-wrap">
+      <div class="restaurant-menu-heading">
+        <div><p class="eyebrow">RECIÉN HECHO PARA TI</p><h2>MENÚ</h2></div>
+        <p>Elige tus favoritos y agrégalos al carrito.</p>
+      </div>
+      <div class="restaurant-products" id="restaurant-products"></div>
+    </section>
+  </main>
+
+  <footer class="restaurant-footer"><a href="index.html#establecimientos">← Volver a establecimientos</a><span>MANDAO · Pide fácil, come feliz.</span></footer>
+
+  <dialog class="site-dialog restaurant-cart" id="cart-dialog">
+    <form method="dialog"><button class="dialog-close" aria-label="Cerrar">×</button></form>
+    <p class="eyebrow">TU PEDIDO</p><h2>Carrito de compras</h2>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-total"><span>Total</span><b id="cart-total">RD$ 0</b></div>
+    <button class="checkout-button" id="checkout-button">Confirmar pedido</button>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

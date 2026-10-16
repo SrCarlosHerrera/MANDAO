@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ff7900">
+  <meta name="description" content="MANDAO: comida favorita, tiendas y mucho más en una sola plataforma.">
+  <title>MANDAO — Tu comida favorita, a un clic</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#inicio" aria-label="MANDAO, inicio">MAN<span>DAO</span><i>✳</i></a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="menu" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#menu">Comidas</a>
+      <a href="#establecimientos">Establecimientos</a>
+      <button class="nav-login" data-open="login-dialog">Iniciar sesión</button>
+      <button class="nav-register" data-open="register-dialog">Registrarme</button>
+      <button class="cart-button" data-open="cart-dialog" aria-label="Abrir carrito">Carrito <span id="cart-count">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> TU ANTOJO, A UN CLIC</p>
+        <h1>¿Y si pedir fuera <em>mucho más fácil?</em></h1>
+        <p class="hero-lead">Ordena tu comida favorita.<br>Una sola plataforma. Todo lo que necesitas.</p>
+        <p class="hero-description">Restaurantes, comida, tiendas y mucho más.<br>En un par de clics y listo.</p>
+        <form class="search-form" id="search-form">
+          <span aria-hidden="true">⌕</span>
+          <input id="search-input" type="search" placeholder="¿Qué te gustaría pedir hoy?" aria-label="Buscar comida o restaurante">
+          <button type="submit">Explorar <b>→</b></button>
+        </form>
+        <div class="hero-note"><span class="note-stars">★★★★★</span> Tus favoritos, directo a tu puerta</div>
+      </div>
+      <div class="hero-art" aria-label="Vista previa de la aplicación MANDAO">
+        <div class="orange-sun"></div>
+        <div class="doodle doodle-left">✳</div>
+        <div class="doodle doodle-right">✦</div>
+        <div class="phone">
+          <div class="phone-island"></div>
+          <div class="phone-top"><span>9:41</span><span>● ◔ ▰</span></div>
+          <div class="phone-logo">MANDAO<i>✳</i></div>
+          <div class="phone-search">⌕ &nbsp; ¿Qué te gustaría pedir?</div>
+          <div class="phone-label">Lo más pedido <span>Ver todo ›</span></div>
+          <div class="phone-food">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=180&q=80" alt="Hamburguesa clásica">
+            <div><b>Hamburguesa clásica</b><small>Con papas y bebida</small><strong>RD$ 390</strong></div>
+            <button aria-label="Agregar hamburguesa" data-add="1">+</button>
+          </div>
+          <div class="phone-tabs"><span>⌂</span><span>♡</span><span>▤</span><span>♙</span></div>
+        </div>
+        <div class="hero-sticker">¡QUÉ<br>ANTOJO!<span>↘</span></div>
+      </div>
+    </section>
+
+    <section class="categories section-wrap" id="servicios">
+      <div class="section-heading">
+        <div><p class="eyebrow">TODO LO QUE SE TE ANTOJE</p><h2>Explora por Categoría</h2></div>
+        <a href="#menu" class="text-link">Ver todas <span>→</span></a>
+      </div>
+      <div class="category-grid">
+        <button class="category-card cat-orange" data-filter="comida"><img src="imagenes/comidasp/c.jpg" alt="Hamburguesa"><b>Comidas</b><small>Tu comida favorita</small></button>
+        <button class="category-card cat-yellow" data-filter="mercado"><img src="imagenes/comidasp/m.jpg" alt="Frutas y verduras"><b>Mercados</b><small>Todo para tu hogar</small></button>
+        <button class="category-card cat-pink" data-filter="bebidas"><img src="imagenes/comidasp/b.jpg" alt="Bebida refrescante"><b>Bebidas</b><small>Algo refrescante</small></button>
+        <button class="category-card cat-green" data-filter="farmacia"><img src="imagenes/comidasp/f.jpg" alt="Productos de farmacia"><b>Farmacias</b><small>Lo que necesitas</small></button>
+        <button class="category-card cat-blue" data-filter="tienda"><img src="imagenes/comidasp/t.jpg" alt="Tienda"><b>Tiendas</b><small>Un poco de todo</small></button>
+        <button class="category-card cat-lilac" data-filter="mascota"><img src="imagenes/comidasp/ma.jpg" alt="Perro"><b>Mascotas</b><small>Para los consentidos</small></button>
+      </div>
+    </section>
+
+    <section class="promo-strip section-wrap" aria-label="Promociones">
+      <article class="promo promo-food">
+        <div><span class="promo-kicker">SABOR QUE SE COMPARTE</span><h3>Hoy se come<br>¡delicioso!</h3><a href="#menu">Pide ahora <span>→</span></a></div>
+        <img src="imagenes/comidasp/comida.jpeg" alt="Pizza recién horneada" onerror="this.src='https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=360&q=80'">
+      </article>
+    </section>
+
+    <section class="popular section-wrap" id="menu">
+      <div class="section-heading">
+        <div><p class="eyebrow">LOS FAVORITOS DE TODOS</p><h2 id="listing-title">Comidas Populares</h2></div>
+        <a href="#establecimientos" class="text-link">Ver establecimientos <span>→</span></a>
+      </div>
+      <div class="filter-row" role="group" aria-label="Filtrar catálogo">
+        <button class="filter-chip is-active" data-filter="todos">Todo</button>
+        <button class="filter-chip" data-filter="comida">Comidas</button>
+        <button class="filter-chip" data-filter="bebidas">Bebidas</button>
+        <button class="filter-chip" data-filter="mercado">Mercados</button>
+        <button class="filter-chip" data-filter="farmacia">Medicina</button>
+        <button class="filter-chip" data-filter="tienda">Tiendas</button>
+        <button class="filter-chip" data-filter="mascota">Mascotas</button>
+        <button class="filter-chip" data-filter="establecimientos">Establecimientos</button>
+      </div>
+      <div class="food-grid" id="product-grid">
+        <article class="food-card" data-category="comida" data-search="hamburguesa clasica burger la clasica">
+          <div class="food-photo"><img src="imagenes/comidasp/h.jpg" alt="Hamburguesa con queso"><span class="food-tag">MÁS PEDIDO</span><button class="favorite" aria-label="Guardar favorito">♡</button></div>
+          <div class="food-info"><div><h3>La Clásica</h3><p>Hamburguesas · 25–35 min</p></div><b class="rating">★ 4.9</b></div>
+          <div class="food-bottom"><span>Desde <b>RD$ 390</b></span><button class="add-button" data-add="1">Agregar +</button></div>
+        </article>
+        <article class="food-card" data-category="comida" data-search="tacos pastor mexicana">
+          <div class="food-photo"><img src="imagenes/comidasp/tacos.jpg" alt="Tacos al pastor"><button class="favorite" aria-label="Guardar favorito">♡</button></div>
+          <div class="food-info"><div><h3>Tacos al Pastor</h3><p>Mexicana · 20–30 min</p></div><b class="rating">★ 4.8</b></div>
+          <div class="food-bottom"><span>Desde <b>RD$ 280</b></span><button class="add-button" data-add="2">Agregar +</button></div>
+        </article>
+        <article class="food-card" data-category="comida" data-search="pizza casa pepperoni">
+          <div class="food-photo"><img src="imagenes/comidasp/pizzap.jpg" alt="Pizza con queso y pepperoni"><button class="favorite" aria-label="Guardar favorito">♡</button></div>
+          <div class="food-info"><div><h3>Pizza de Pepperoni</h3><p>Pizza · 30–40 min</p></div><b class="rating">★ 4.9</b></div>
+          <div class="food-bottom"><span>Desde <b>RD$ 550</b></span><button class="add-button" data-add="3">Agregar +</button></div>
+        </article>
+        <article class="food-card" data-category="comida" data-search="bowl tropical saludable ensalada">
+          <div class="food-photo"><img src="imagenes/comidasp/mofo.jpg" alt="Bowl saludable de vegetales"><button class="favorite" aria-label="Guardar favorito">♡</button></div>
+          <div class="food-info"><div><h3>Mofongo</h3><p>Exquisito · 20–30 min</p></div><b class="rating">★ 4.7</b></div>
+          <div class="food-bottom"><span>Desde <b>RD$ 800</b></span><button class="add-button" data-add="4">Agregar +</button></div>
+        </article>
+        <article class="food-card" data-category="comida" data-search="bowl tropical saludable ensalada">
+          <div class="food-photo"><img src="imagenes/comidasp/tapao.jpg" alt="Bowl saludable de vegetales"><button class="favorite" aria-label="Guardar favorito">♡</button></div>
+          <div class="food-info"><div><h3>Tapao</h3><p>Exquisito · 20–30 min</p></div><b class="rating">★ 4.7</b></div>
+          <div class="food-bottom"><span>Desde <b>RD$ 45</b></span><button class="add-button" data-add="4">Agregar +</button></div>
+        </article>
+        <article class="food-card" data-category="comida" data-search="bowl tropical saludable ensalada">
+          <div class="food-photo"><img src="imagenes/comidasp/yaroa.jpeg" alt="Bowl saludable de vegetales"><button class="favorite" aria-label="Guardar favorito">♡</button></div>
+          <div class="food-info"><div><h3>Yaroa</h3><p>Exquisito · 20–30 min</p></div><b class="rating">★ 4.7</b></div>
+          <div class="food-bottom"><span>Desde <b>RD$ 350</b></span><button class="add-button" data-add="4">Agregar +</button></div>
+        </article>
+        <article class="food-card" data-category="comida" data-search="bowl tropical saludable ensalada">
+          <div class="food-photo"><img src="imagenes/comidasp/chimi.jpg" alt="Bowl saludable de vegetales"><button class="favorite" aria-label="Guardar favorito">♡</button></div>
+          <div class="food-info"><div><h3>Chimi</h3><p>Exquisito · 20–30 min</p></div><b class="rating">★ 4.7</b></div>
+          <div class="food-bottom"><span>Desde <b>RD$ 150</b></span><button class="add-button" data-add="4">Agregar +</button></div>
+        </article>
+        <article class="food-card" data-category="bebidas" data-search="jugo natural limonada bebida">
+          <div class="food-photo"><img src="imagenes/comidasp/jugos.jpg" alt="Bebida fría de frutas"><button class="favorite" aria-label="Guardar favorito">♡</button></div>
+          <div class="food-info"><div><h3>Jugos Naturales</h3><p>Bebidas · 15–20 min</p></div><b class="rating">★ 4.8</b></div>
+          <div class="food-bottom"><span>Desde <b>RD$ 120</b></span><button class="add-button" data-add="5">Agregar +</button></div>
+        </article>
+        <article class="food-card" data-category="bebidas" data-search="jugo natural limonada bebida">
+          <div class="food-photo"><img src="imagenes/comidasp/alcohol.jpg" alt="Bebida fría de frutas"><button class="favorite" aria-label="Guardar favorito">♡</button></div>
+          <div class="food-info"><div><h3>Ron</h3><p>Bebidas · 15–20 min</p></div><b class="rating">★ 4.8</b></div>
+          <div class="food-bottom"><span>Desde <b>RD$ 3000</b></span><button class="add-button" data-add="5">Agregar +</button></div>
+        </article>
+        <article class="food-card" data-category="bebidas" data-search="jugo natural limonada bebida">
+          <div class="food-photo"><img src="imagenes/comidasp/cervezas.jpg" alt="Bebida fría de frutas"><button class="favorite" aria-label="Guardar favorito">♡</button></div>
+          <div class="food-info"><div><h3>Cervezas</h3><p>Bebidas · 15–20 min</p></div><b class="rating">★ 4.8</b></div>
+          <div class="food-bottom"><span>Desde <b>RD$ 300</b></span><button class="add-button" data-add="5">Agregar +</button></div>
+        </article>
+        <article class="food-card" data-category="mercado" data-search="frutas mercado canasta fresca">
+          <div class="food-photo"><img src="imagenes/comidasp/vegetales.jpg" alt="Frutas y verduras frescas"><button class="favorite" aria-label="Guardar favorito">♡</button></div>
+          <div class="food-info"><div><h3>Vegetales y Verduras Fresca</h3><p>Mercado · 20–30 min</p></div><b class="rating">★ 4.8</b></div>
+          <div class="food-bottom"><span>Desde <b>RD$ 450</b></span><button class="add-button" data-add="6">Agregar +</button></div>
+        </article>
+        <article class="food-card" data-category="farmacia" data-search="farmacia botiquin cuidado salud">
+          <div class="food-photo"><img src="imagenes/comidasp/medicamentos.jpg" alt="Productos de cuidado personal"><button class="favorite" aria-label="Guardar favorito">♡</button></div>
+          <div class="food-info"><div><h3>Medicamentos</h3><p>Farmacia · 20–35 min</p></div><b class="rating">★ 4.7</b></div>
+          <div class="food-bottom"><span>Desde <b>RD$ 320</b></span><button class="add-button" data-add="7">Agregar +</button></div>
+        </article>
+        <article class="food-card" data-category="mascota" data-search="mascotas perro alimento snack">
+          <div class="food-photo"><img src="imagenes/comidasp/alimentos.jpg" alt="Perro listo para recibir su premio"><button class="favorite" aria-label="Guardar favorito">♡</button></div>
+          <div class="food-info"><div><h3>Alimentos para Mascotas</h3><p>Mascotas · 20–35 min</p></div><b class="rating">★ 4.9</b></div>
+          <div class="food-bottom"><span>Desde <b>RD$ 260</b></span><button class="add-button" data-add="9">Agregar +</button></div>
+        </article>
+      </div>
+      <p class="empty-message" id="empty-message" hidden>No encontramos opciones con ese filtro. Prueba otra categoría.</p>
+    </section>
+
+    <section class="establishments section-wrap" id="establecimientos">
+      <div class="section-heading"><div><p class="eyebrow">CERCA DE TI</p><h2>Establecimientos Destacados</h2></div><button class="text-link" data-filter="establecimientos">Ver todos <span>→</span></button></div>
+      <div class="establishment-grid">
+        <article class="establishment-card"><a href="restaurant.html?restaurant=kfc"><img src="imagenes/kfc/kfc.jpg" alt="Interior de restaurante"><div><h3>KFC</h3><p>Pollo Frito · 20–30 min</p><span>★ 4.9 · Envío gratis</span></div><b class="establishment-open">Ver menú →</b></a></article>
+        <article class="establishment-card"><a href="restaurant.html?restaurant=little"><img src="imagenes/little/images.png" alt="Restaurante acogedor"><div><h3>Little Caesars</h3><p>Pizza · 25–35 min</p><span>★ 4.8 · Envío gratis</span></div><b class="establishment-open">Ver menú →</b></a></article>
+        <article class="establishment-card"><a href="restaurant.html?restaurant=cafe"><img src="imagenes/cafe/images.jpg" alt="Comedor de restaurante"><div><h3>Café Santo Domingo</h3><p>Saludable · 15–25 min</p><span>★ 4.7 · Envío gratis</span></div><b class="establishment-open">Ver menú →</b></a></article>
+        <article class="establishment-card"><a href="restaurant.html?restaurant=jade"><img src="imagenes/jade/jade.jpg" alt="Interior de restaurante"><div><h3>Jade Teriyaki</h3><p>Pollo Rico · 20–30 min</p><span>★ 4.9 · Envío gratis</span></div><b class="establishment-open">Ver menú →</b></a></article>
+        <article class="establishment-card"><a href="restaurant.html?restaurant=burger"><img src="imagenes/burger/Burger.jpg" alt="Interior de restaurante"><div><h3>Burger King</h3><p>Donde Sabe Mejor · 20–30 min</p><span>★ 4.9 · Envío gratis</span></div><b class="establishment-open">Ver menú →</b></a></article>
+      </div>
+    </section>
+
+    <section class="app-banner section-wrap">
+      <div><p class="eyebrow">MANDAO SIEMPRE CONTIGO</p><h2>El antojo no espera.<br><em>¡Nosotros tampoco!</em></h2><p>Encuentra tus sabores favoritos y pide fácil, rápido y seguro.</p><button class="app-button" data-open="register-dialog">Crea tu cuenta <span>→</span></button></div>
+      <div class="app-art"><div class="app-phone"><span>MANDAO</span><b>¡PIDE<br>AQUÍ!</b></div></div>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <a class="logo footer-logo" href="#inicio">MAN<span>DAO</span><i>✳</i></a>
+    <p>Lo que se te antoja, donde estés.</p>
+    <div class="footer-links"><a href="#servicios">Servicios</a><a href="#establecimientos">Establecimientos</a><button data-open="register-dialog">Crear cuenta</button></div>
+    <small>© 2026 MANDAO. Hecho con sabor en República Dominicana.</small>
+  </footer>
+
+  <dialog class="site-dialog" id="cart-dialog">
+    <form method="dialog"><button class="dialog-close" aria-label="Cerrar">×</button></form>
+    <p class="eyebrow">TU PEDIDO</p><h2>Carrito de compras</h2>
+    <div id="cart-items" class="cart-items"><p class="cart-empty">Tu carrito está vacío. ¡Elige algo rico!</p></div>
+    <div class="cart-total"><span>Total</span><b id="cart-total">RD$ 0</b></div>
+    <button class="checkout-button" id="checkout-button">Continuar con el pedido</button>
+  </dialog>
+
+  <dialog class="site-dialog form-dialog" id="register-dialog">
+    <form method="dialog"><button class="dialog-close" aria-label="Cerrar">×</button></form>
+    <p class="eyebrow">BIENVENIDO A MANDAO</p><h2>Crea tu cuenta</h2>
+    <form class="account-form" id="register-form">
+      <label>Nombre completo<input name="name" autocomplete="name" required placeholder="Tu nombre"></label>
+      <label>Correo electrónico<input name="email" type="email" autocomplete="email" required placeholder="nombre@correo.com"></label>
+      <label>Teléfono<input name="phone" type="tel" autocomplete="tel" required placeholder="809 000 0000"></label>
+      <label>Contraseña<input name="password" type="password" autocomplete="new-password" minlength="6" required placeholder="Mínimo 6 caracteres"></label>
+      <button class="checkout-button" type="submit">Registrarme</button>
+      <p class="form-notice" id="register-notice" role="status"></p>
+    </form>
+  </dialog>
+
+  <dialog class="site-dialog form-dialog" id="login-dialog">
+    <form method="dialog"><button class="dialog-close" aria-label="Cerrar">×</button></form>
+    <p class="eyebrow">QUÉ BUENO VERTE</p><h2>Inicia sesión</h2>
+    <form class="account-form" id="login-form">
+      <label>Correo electrónico<input name="email" type="email" autocomplete="email" required placeholder="nombre@correo.com"></label>
+      <label>Contraseña<input name="password" type="password" autocomplete="current-password" required placeholder="Tu contraseña"></label>
+      <button class="checkout-button" type="submit">Iniciar sesión</button>
+      <p class="form-notice" id="login-notice" role="status"></p>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
