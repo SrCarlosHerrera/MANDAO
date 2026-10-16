@@ -1,0 +1,270 @@
+/* MANDAO | Estilos organizados por secciones */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap');
+
+/* 1. Variables, base y elementos compartidos */
+:root {
+  --orange: #ff7900;
+  --orange-dark: #f15b13;
+  --ink: #171717;
+  --muted: #77747a;
+  --cream: #fff9f3;
+  --line: #eee9e4;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { color: var(--ink); background: #fff; font-family: 'DM Sans', sans-serif; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+[hidden] { display: none !important; }
+.section-wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding-right: 30px; padding-left: 30px; }
+.eyebrow { margin: 0 0 13px; color: var(--orange); font-size: 11px; font-weight: 800; letter-spacing: 1.8px; }
+.section-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 22px; }
+.section-heading h2 { margin: 0; font: 800 27px 'Montserrat', sans-serif; letter-spacing: -.8px; }
+.section-heading .eyebrow { margin-bottom: 8px; }
+.text-link { border: 0; background: none; font-size: 13px; font-weight: 700; }
+.text-link span { margin-left: 6px; color: var(--orange); font-size: 18px; }
+
+/* 2. Encabezado y navegación */
+.site-header { position: sticky; z-index: 20; top: 0; display: flex; height: 82px; align-items: center; justify-content: space-between; padding: 0 max(5vw, 24px); border-bottom: 1px solid #f0eeeb; background: #fff; }
+.logo { font: 900 25px 'Montserrat', sans-serif; letter-spacing: -1.5px; white-space: nowrap; }
+.logo span { color: var(--orange); }
+.logo i { margin-left: 3px; color: var(--orange); font-size: 15px; font-style: normal; vertical-align: top; }
+.menu { display: flex; align-items: center; gap: 21px; font-size: 13px; font-weight: 600; }
+.menu > a:hover, .footer-links a:hover { color: var(--orange); }
+.nav-login, .nav-register, .cart-button { border: 0; font-size: 12px; font-weight: 700; }
+.nav-login { margin-left: 5px; background: none; }
+.nav-register { padding: 12px 17px; border-radius: 999px; background: var(--orange); color: #fff; }
+.cart-button { padding: 10px 13px; border: 1px solid var(--line); border-radius: 999px; background: white; }
+.cart-button span { display: inline-grid; width: 20px; height: 20px; place-items: center; margin-left: 4px; border-radius: 50%; background: var(--orange); color: white; }
+.menu-toggle { display: none; width: 38px; padding: 5px; border: 0; background: none; }
+.menu-toggle span { display: block; height: 3px; margin: 5px 0; border-radius: 3px; background: var(--orange); }
+
+/* 3. Portada y maqueta del teléfono */
+.hero { display: grid; max-width: 1240px; min-height: 550px; grid-template-columns: 1fr 1fr; align-items: center; gap: 30px; overflow: hidden; margin: auto; padding: 56px 30px 60px; }
+.hero-copy { position: relative; z-index: 2; }
+.hero .eyebrow span { display: inline-block; width: 22px; height: 3px; margin-right: 6px; background: var(--orange); vertical-align: middle; }
+.hero h1 { max-width: 580px; margin: 0 0 19px; font: 800 clamp(40px, 5vw, 64px)/1.08 'Montserrat', sans-serif; letter-spacing: -2.6px; }
+.hero h1 em, .app-banner h2 em { color: var(--orange); font-style: normal; }
+.hero-lead { margin: 0 0 9px; font: 700 20px/1.5 'Montserrat', sans-serif; }
+.hero-description { margin: 0 0 24px; color: #666; font-size: 15px; line-height: 1.65; }
+.search-form { display: flex; max-width: 510px; height: 57px; align-items: center; gap: 9px; padding: 5px 6px 5px 16px; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 8px 25px #241b1010; }
+.search-form > span { color: var(--orange); font-size: 28px; line-height: 1; }
+.search-form input { min-width: 0; flex: 1; border: 0; outline: 0; font-size: 13px; }
+.search-form button, .app-button { padding: 13px 16px; border: 0; border-radius: 10px; background: var(--orange); color: white; font-size: 12px; font-weight: 700; }
+.search-form button b { margin-left: 8px; font-size: 17px; }
+.hero-note { margin-top: 19px; color: #777; font-size: 12px; }
+.note-stars { margin-right: 7px; color: var(--orange); letter-spacing: 2px; }
+.hero-art { position: relative; display: flex; height: 450px; align-items: center; justify-content: center; }
+.orange-sun { position: absolute; top: 9%; right: 12%; width: 345px; height: 345px; border-radius: 50%; background: #fff0df; }
+.phone { position: relative; z-index: 2; width: 230px; height: 400px; padding: 20px 13px 14px; transform: rotate(7deg); border: 8px solid #191919; border-radius: 36px; background: #fff; box-shadow: 0 25px 50px #341d1026; }
+.phone-island { position: absolute; top: 8px; left: 50%; width: 65px; height: 15px; transform: translateX(-50%); border-radius: 12px; background: #171717; }
+.phone-top { display: flex; justify-content: space-between; margin: 5px 0 19px; font-size: 9px; font-weight: 700; }
+.phone-logo { text-align: center; font: 900 23px 'Montserrat', sans-serif; letter-spacing: -1px; }
+.phone-logo i { color: var(--orange); font-size: 15px; font-style: normal; }
+.phone-search { margin: 19px 0 18px; padding: 12px 9px; border-radius: 12px; background: #f6f4f2; color: #85817b; font-size: 9px; }
+.phone-label { margin-bottom: 10px; font-size: 11px; font-weight: 800; }
+.phone-label span { float: right; color: var(--orange); font-size: 9px; }
+.phone-food { position: relative; display: flex; height: 119px; align-items: center; gap: 7px; padding: 9px; border-radius: 13px; background: #fff8f0; }
+.phone-food img { width: 54px; height: 63px; border-radius: 10px; object-fit: cover; }
+.phone-food b, .phone-food small, .phone-food strong { display: block; font-size: 8px; }
+.phone-food small { margin: 5px 0; color: #888; }
+.phone-food strong { color: var(--orange); font-size: 10px; }
+.phone-food button { position: absolute; right: 9px; bottom: 9px; width: 22px; height: 22px; border: 0; border-radius: 50%; background: var(--orange); color: white; }
+.phone-tabs { display: flex; justify-content: space-around; margin-top: 19px; color: #999; font-size: 17px; }
+.phone-tabs span:first-child { color: var(--orange); }
+.doodle { position: absolute; color: var(--orange); font-size: 55px; }
+.doodle-left { bottom: 12%; left: 12%; }
+.doodle-right { top: 8%; right: 6%; font-size: 39px; }
+.hero-sticker { position: absolute; z-index: 4; right: 2%; bottom: 11%; display: grid; width: 86px; height: 86px; transform: rotate(12deg); place-content: center; border-radius: 50%; background: var(--orange); color: white; text-align: center; font: 900 14px/1.05 'Montserrat', sans-serif; box-shadow: 0 8px 20px #ff790044; }
+.hero-sticker span { font-size: 22px; }
+
+/* 4. Categorías */
+.categories { padding-top: 15px; padding-bottom: 60px; }
+.category-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+.category-card { display: flex; min-width: 0; min-height: 162px; flex-direction: column; align-items: center; justify-content: center; padding: 13px 12px; border: 0; border-radius: 18px; transition: transform .2s, box-shadow .2s; }
+.category-card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px #271e1512; }
+.category-card img { width: 88px; height: 75px; margin-bottom: 10px; border-radius: 13px; object-fit: cover; }
+.category-card b { font-size: 13px; }
+.category-card small { margin-top: 5px; color: #706b66; font-size: 10px; }
+.cat-orange { background: #fff0e1; }
+.cat-yellow { background: #fff7d9; }
+.cat-pink { background: #ffe9e5; }
+.cat-green { background: #eaf5e8; }
+.cat-blue { background: #e5f2ff; }
+.cat-lilac { background: #f2eafa; }
+
+/* 5. Promociones */
+.promo-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; padding-bottom: 68px; }
+.promo { position: relative; display: flex; height: 190px; justify-content: space-between; overflow: hidden; padding: 25px 30px; border-radius: 19px; }
+.promo-food { background: #ffdfb9; }
+.promo-pay { background: #ffe3d9; }
+.promo-kicker { color: #8d4c0c; font-size: 9px; font-weight: 800; letter-spacing: 1.5px; }
+.promo h3 { margin: 12px 0; font: 800 25px/1.16 'Montserrat', sans-serif; }
+.promo a { display: inline-block; padding: 9px 14px; border-radius: 999px; background: #fff; font-size: 11px; font-weight: 700; }
+.promo a span { margin-left: 8px; color: var(--orange); }
+.promo img { width: 43%; height: 100%; align-self: center; border-radius: 14px; object-fit: cover; }
+
+/* 6. Catálogo de productos */
+.popular { padding-bottom: 65px; scroll-margin-top: 100px; }
+.filter-row { display: flex; flex-wrap: wrap; gap: 9px; margin: -3px 0 20px; }
+.filter-chip { padding: 9px 15px; border: 1px solid var(--line); border-radius: 999px; background: white; color: #5e5a55; font-size: 11px; font-weight: 700; }
+.filter-chip:hover, .filter-chip.is-active { border-color: var(--orange); background: var(--orange); color: white; }
+.food-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 17px; }
+.food-card { overflow: hidden; border: 1px solid #f0ece8; border-radius: 16px; background: #fff; transition: transform .2s, box-shadow .2s; }
+.food-card:hover { transform: translateY(-4px); box-shadow: 0 12px 25px #271e1510; }
+.food-photo { position: relative; height: 180px; overflow: hidden; background: #f4eee8; }
+.food-photo > img { width: 100%; height: 100%; object-fit: cover; transition: transform .25s; }
+.food-card:hover .food-photo > img { transform: scale(1.05); }
+.food-tag { position: absolute; top: 12px; left: 12px; padding: 6px 9px; border-radius: 999px; background: #fff; color: var(--orange-dark); font-size: 8px; font-weight: 800; letter-spacing: .6px; }
+.favorite { position: absolute; top: 10px; right: 12px; width: 31px; height: 31px; border: 0; border-radius: 50%; background: #fff; color: #333; font-size: 19px; }
+.favorite.is-favorite { color: #e83d4e; }
+.food-info, .food-bottom { display: flex; align-items: center; justify-content: space-between; padding: 13px 13px 0; }
+.food-info h3 { margin: 0 0 5px; font-size: 13px; }
+.food-info p { margin: 0; color: #817d78; font-size: 10px; }
+.rating { font-size: 10px; white-space: nowrap; }
+.rating:first-letter { color: #ffad18; }
+.food-bottom { padding: 13px; color: #777; font-size: 10px; }
+.food-bottom > span b { color: var(--ink); }
+.add-button { padding: 8px 11px; border: 0; border-radius: 999px; background: #fff0e1; color: #a94d00; font-size: 10px; font-weight: 800; }
+.add-button:hover { background: var(--orange); color: white; }
+.empty-message { padding: 35px 10px; color: var(--muted); text-align: center; }
+
+/* 7. Establecimientos */
+.establishments { padding-bottom: 65px; scroll-margin-top: 100px; }
+.establishment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+.establishment-card { overflow: hidden; border: 1px solid var(--line); border-radius: 16px; transition: transform .2s, box-shadow .2s; }
+.establishment-card:hover { transform: translateY(-3px); box-shadow: 0 12px 25px #271e1510; }
+.establishment-card > a { position: relative; display: block; height: 100%; color: inherit; }
+.establishment-card > a > img { display: block; width: 100%; height: 170px; object-fit: cover; }
+.establishment-card > a > div { padding: 13px 15px 15px; }
+.establishment-open { display: block; padding: 0 15px 14px; color: var(--orange); font-size: 11px; }
+.establishment-card h3 { margin: 0 0 5px; font-size: 14px; }
+.establishment-card p { margin: 0 0 9px; color: var(--muted); font-size: 11px; }
+.establishment-card span { color: #47884e; font-size: 10px; font-weight: 700; }
+
+/* 8. Llamado a registrarse y pie de página */
+.app-banner { display: flex; min-height: 270px; align-items: center; justify-content: space-between; overflow: hidden; margin-bottom: 65px; padding-top: 36px; padding-bottom: 36px; border-radius: 22px; background: #fff3e6; }
+.app-banner h2 { margin: 0 0 10px; font: 800 31px/1.25 'Montserrat', sans-serif; letter-spacing: -1px; }
+.app-banner > div:first-child > p:not(.eyebrow) { margin: 0 0 20px; color: #726b65; font-size: 13px; }
+.app-button { display: inline-block; }
+.app-button span { margin-left: 13px; }
+.app-art { position: relative; display: grid; width: 260px; height: 200px; place-items: center; margin-right: 10%; transform: rotate(-5deg); border-radius: 100px 100px 24px 24px; background: var(--orange); }
+.app-phone { position: relative; display: grid; width: 105px; height: 155px; place-content: center; border: 6px solid #191919; border-radius: 22px; background: white; text-align: center; }
+.app-phone span { font: 900 13px 'Montserrat', sans-serif; }
+.app-phone b { position: absolute; top: -23px; right: -41px; display: grid; width: 66px; height: 66px; transform: rotate(8deg); place-content: center; border-radius: 50%; background: #fff; color: var(--orange); text-align: center; font: 900 11px/1.05 'Montserrat', sans-serif; }
+footer { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px 30px; padding: 40px max(6vw, 30px) 25px; background: #191919; color: white; }
+.footer-logo { color: #fff; }
+.footer-logo + p { grid-column: 1; margin: 0; color: #aaa; font-size: 12px; }
+.footer-links { display: flex; grid-column: 2; grid-row: 1 / 3; gap: 23px; color: #ddd; font-size: 12px; }
+.footer-links button { border: 0; background: none; color: inherit; font-size: inherit; }
+footer small { grid-column: 1 / -1; margin-top: 20px; padding-top: 18px; border-top: 1px solid #393939; color: #999; font-size: 10px; }
+
+/* 9. Ventanas del carrito y cuenta */
+.site-dialog { position: fixed; width: min(440px, calc(100% - 30px)); max-height: 85vh; padding: 30px; border: 0; border-radius: 20px; box-shadow: 0 20px 80px #0003; }
+.site-dialog::backdrop { background: #17171788; backdrop-filter: blur(3px); }
+.site-dialog h2 { margin: 0 0 22px; font: 800 25px 'Montserrat', sans-serif; }
+.dialog-close { position: absolute; top: 14px; right: 17px; border: 0; background: none; color: #777; font-size: 27px; }
+.cart-items { max-height: 40vh; overflow-y: auto; }
+.cart-empty { padding: 15px 0; color: var(--muted); font-size: 13px; }
+.cart-item { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--line); }
+.cart-item b, .cart-item small { display: block; }
+.cart-item b { font-size: 13px; }
+.cart-item small { margin-top: 4px; color: var(--muted); font-size: 10px; }
+.quantity-control { display: flex; align-items: center; gap: 10px; }
+.quantity-control button { width: 27px; height: 27px; border: 0; border-radius: 50%; background: #fff0e1; color: #a94d00; font-weight: 800; }
+.quantity-control span { min-width: 12px; text-align: center; font-size: 12px; }
+.cart-total { display: flex; justify-content: space-between; margin: 20px 0; font-size: 15px; }
+.checkout-button { width: 100%; padding: 14px; border: 0; border-radius: 11px; background: var(--orange); color: #fff; font-weight: 800; }
+.checkout-button:disabled { cursor: not-allowed; background: #ccc; }
+.account-form { display: grid; gap: 14px; }
+.account-form label { display: grid; gap: 6px; font-size: 11px; font-weight: 700; }
+.account-form input { width: 100%; padding: 12px; border: 1px solid var(--line); border-radius: 9px; outline-color: var(--orange); font-size: 13px; }
+.form-notice { min-height: 18px; margin: 0; color: #3a8747; font-size: 12px; line-height: 1.5; }
+.toast { position: fixed; z-index: 30; right: 24px; bottom: 24px; padding: 13px 18px; transform: translateY(20px); border-radius: 12px; background: #191919; color: white; font-size: 13px; opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; }
+.toast-visible { transform: translateY(0); opacity: 1; }
+
+/* 10. Adaptación a tablets */
+@media (max-width: 900px) {
+  .site-header { height: 72px; }
+  .menu { gap: 12px; font-size: 11px; }
+  .nav-login { margin-left: 0; }
+  .hero { grid-template-columns: 1.05fr .95fr; gap: 5px; padding-top: 40px; }
+  .hero h1 { font-size: 48px; }
+  .hero-art { transform: scale(.9); }
+  .category-grid { grid-template-columns: repeat(3, 1fr); }
+  .food-grid { grid-template-columns: repeat(2, 1fr); }
+  .food-photo { height: 210px; }
+}
+
+/* 11. Adaptación a móviles */
+@media (max-width: 680px) {
+  .site-header { height: 68px; padding: 0 20px; }
+  .logo { font-size: 23px; }
+  .menu-toggle { display: block; }
+  .menu { position: absolute; top: 67px; right: 0; left: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 17px 22px 22px; background: #fff; box-shadow: 0 14px 20px #00000012; }
+  .menu.menu-open { display: flex; }
+  .menu > a, .menu > button { padding: 13px 3px; border-bottom: 1px solid #f3efeb; text-align: left; }
+  .menu .nav-login { margin: 5px 0 0; }
+  .menu .nav-register { margin-top: 12px; border: 0; text-align: center; }
+  .menu .cart-button { margin-top: 9px; text-align: center; }
+  .hero { display: flex; flex-direction: column; align-items: stretch; gap: 8px; padding: 43px 22px 25px; }
+  .hero h1 { font-size: 43px; letter-spacing: -1.8px; }
+  .hero-lead { font-size: 17px; }
+  .hero-description { font-size: 14px; }
+  .search-form { min-height: 54px; }
+  .search-form input { font-size: 11px; }
+  .search-form button { padding: 12px 10px; font-size: 10px; }
+  .hero-art { height: 355px; transform: scale(.83); transform-origin: top center; margin-bottom: -45px; }
+  .orange-sun { right: 14%; width: 300px; height: 300px; }
+  .phone { height: 370px; }
+  .section-wrap { padding-right: 21px; padding-left: 21px; }
+  .section-heading h2 { font-size: 22px; }
+  .section-heading .eyebrow { font-size: 9px; }
+  .text-link { font-size: 11px; }
+  .categories { padding-top: 30px; padding-bottom: 46px; }
+  .category-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .category-card { min-height: 137px; }
+  .category-card img { width: 80px; height: 64px; }
+  .promo-strip { grid-template-columns: 1fr; gap: 12px; padding-bottom: 50px; }
+  .promo { height: 165px; padding: 21px; }
+  .promo h3 { font-size: 23px; }
+  .promo img { width: 38%; }
+  .popular, .establishments { padding-bottom: 48px; }
+  .filter-row { gap: 7px; }
+  .filter-chip { padding: 8px 11px; font-size: 10px; }
+  .food-grid { gap: 11px; }
+  .food-photo { height: 145px; }
+  .food-info, .food-bottom { padding-right: 10px; padding-left: 10px; }
+  .food-info h3 { font-size: 11px; }
+  .food-info p, .food-bottom { font-size: 9px; }
+  .add-button { padding: 7px 8px; font-size: 9px; }
+  .establishment-grid { grid-template-columns: 1fr; }
+  .establishment-card { display: grid; grid-template-columns: 112px 1fr; align-items: center; }
+  .establishment-card > a { display: grid; height: 100%; grid-template-columns: 112px 1fr; align-items: center; }
+  .establishment-card > a > img { height: 100%; min-height: 112px; }
+  .establishment-open { grid-column: 2; padding-top: 0; }
+  .app-banner { position: relative; display: block; width: auto; min-height: 350px; margin: 0 20px 48px; padding: 27px 22px; }
+  .app-banner h2 { font-size: 26px; }
+  .app-banner > div:first-child > p:not(.eyebrow) { max-width: 235px; font-size: 11px; line-height: 1.6; }
+  .app-art { position: absolute; right: -27px; bottom: -25px; width: 190px; height: 125px; margin: 0; }
+  .app-phone { width: 78px; height: 115px; border-width: 5px; border-radius: 17px; }
+  .app-phone span { font-size: 9px; }
+  .app-phone b { right: -32px; width: 58px; height: 58px; font-size: 10px; }
+  footer { grid-template-columns: 1fr; padding: 32px 22px 20px; }
+  .footer-links { grid-column: 1; grid-row: auto; flex-wrap: wrap; gap: 16px; margin-top: 12px; font-size: 10px; }
+  footer small { grid-column: 1; font-size: 10px; }
+  .site-dialog { padding: 26px 22px; }
+  .toast { right: 15px; bottom: 15px; left: 15px; text-align: center; }
+}
+
+@media (max-width: 390px) {
+  .hero h1 { font-size: 37px; }
+  .hero-art { height: 315px; transform: scale(.73); margin-bottom: -40px; }
+  .section-heading h2 { font-size: 20px; }
+  .food-photo { height: 126px; }
+  .food-tag { padding: 5px 7px; font-size: 7px; }
+  .food-info { align-items: flex-start; }
+  .rating { font-size: 9px; }
+}
+
