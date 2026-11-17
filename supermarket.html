@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ff7900">
+  <title>Menú de los Supermercados — MANDAO</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="styless.css">
+  <link rel="stylesheet" href="supermarket.css">
+  <script src="supermarket.js" defer></script>
+</head>
+<body>
+  <header class="site-header restaurant-header">
+    <a class="logo" href="index.html#supermercados">MAN<span>DAO</span><i>✳</i></a>
+    <a class="back-link" href="index.html#supermercados">← Volver a supermercados</a>
+    <button class="cart-button" id="open-cart">Carrito <span id="cart-count">0</span></button>
+  </header>
+
+  <main>
+    <section class="supermarket-hero" id="supermarket-hero">
+      <img id="supermarket-image" src="" alt="">
+      <div class="supermarket-overlay"></div>
+      <div class="supermarket-summary">
+        <p class="eyebrow">ESTABLECIMIENTO</p>
+        <h1 id="supermarket-name">Cargando menú...</h1>
+        <p id="supermarket-description"></p>
+        <span id="supermarket-rating"></span>
+      </div>
+    </section>
+
+    <section class="supermarket-menu section-wrap">
+      <div class="supermarket-menu-heading">
+        <div><p class="eyebrow">RECIÉN HECHO PARA TI</p><h2>MENÚ</h2></div>
+        <p>Productos y precios de demostración. Elige y agrégalos al carrito.</p>
+      </div>
+      <div class="supermarket-products" id="supermarket-products"></div>
+    </section>
+  </main>
+
+  <footer class="supermarket-footer"><a href="index.html#supermercados">← Volver a supermercados</a><span>MANDAO · Pide fácil, come feliz.</span></footer>
+
+  <dialog class="site-dialog restaurant-cart" id="cart-dialog">
+    <form method="dialog"><button class="dialog-close" aria-label="Cerrar">×</button></form>
+    <p class="eyebrow">TU PEDIDO</p><h2>Carrito de compras</h2>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-total"><span>Total</span><b id="cart-total">RD$ 0</b></div>
+    <button class="checkout-button" id="checkout-button">Confirmar pedido</button>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+/* Vista del supermarket */
+.supermarket-header { gap: 18px; }
+.back-link { margin-right: auto; color: #625d58; font-size: 13px; font-weight: 700; }
+.back-link:hover, .restaurant-footer a:hover { color: var(--orange); }
+.supermarket-hero { position: relative; display: flex; height: 340px; align-items: end; overflow: hidden; background: #48331f; }
+.supermarket-hero > img { position: absolute; width: 100%; height: 100%; object-fit: cover; }
+.supermarket-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, #171717c9, #17171730); }
+.supermarket-summary { position: relative; z-index: 1; width: 100%; max-width: 1240px; margin: 0 auto; padding: 40px 30px; color: white; }
+.supermarket-summary .eyebrow { color: #ffc184; }
+.supermarket-summary h1 { margin: 0 0 8px; font: 800 clamp(32px, 5vw, 52px) 'Montserrat', sans-serif; }
+.supermarket-summary p:not(.eyebrow) { margin: 0 0 12px; color: #f3eee8; }
+.supermarket-summary > span { font-size: 12px; font-weight: 700; }
+.supermarket-menu { padding-top: 45px; padding-bottom: 75px; }
+.supermarket-menu-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 22px; }
+.supermarket-menu-heading h2 { margin: 0; font: 800 28px 'Montserrat', sans-serif; }
+.supermarket-menu-heading > p { color: var(--muted); font-size: 13px; }
+.supermarket-products { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.supermarket-product { display: grid; min-height: 140px; grid-template-columns: 130px 1fr; overflow: hidden; border: 1px solid var(--line); border-radius: 15px; background: white; }
+.supermarket-product > img { width: 130px; height: 100%; min-height: 140px; object-fit: cover; }
+.supermarket-product-info { display: flex; flex-direction: column; align-items: start; padding: 15px; }
+.supermarket-product-info h3 { margin: 0 0 5px; font-size: 14px; }
+.supermarket-product-info p { margin: 0 0 12px; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.supermarket-product-bottom { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 8px; margin-top: auto; font-size: 12px; font-weight: 800; }
+.supermarket-product-bottom button { padding: 8px 10px; border: 0; border-radius: 999px; background: #fff0e1; color: #a94d00; font-size: 10px; font-weight: 800; }
+.supermarket-product-bottom button:hover { background: var(--orange); color: white; }
+.supermarket-footer { display: flex; justify-content: space-between; padding: 22px max(6vw, 30px); background: #191919; color: #ddd; font-size: 12px; }
+.supermarket-footer a { font-weight: 700; }
+.supermarket-footer span { color: #aaa; }
+@media (max-width: 760px) {
+  .supermarket-header { height: 68px; padding: 0 18px; }
+  .back-link { font-size: 11px; }
+  .supermarket-hero { height: 290px; }
+  .supermarket-summary { padding: 30px 22px; }
+  .supermarket-menu { padding: 35px 20px 55px; }
+  .supermarket-menu-heading { display: block; }
+  .supermarket-menu-heading h2 { font-size: 24px; }
+  .supermarket-menu-heading > p { font-size: 12px; }
+  .supermarket-products { grid-template-columns: 1fr; }
+  .supermarket-product { grid-template-columns: 115px 1fr; }
+  .supermarket-product > img { width: 115px; }
+  .supermarket-footer { gap: 15px; flex-wrap: wrap; padding: 20px; font-size: 10px; }
+}
+@media (max-width: 390px) {
+  .supermarket-header .logo { font-size: 19px; }
+  .back-link { max-width: 125px; }
+  .supermarket-product { grid-template-columns: 100px 1fr; }
+  .supermarket-product > img { width: 100px; }
+  .supermarket-product-info { padding: 12px; }
+}
